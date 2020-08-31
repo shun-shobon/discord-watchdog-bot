@@ -13,5 +13,8 @@
     "type": "git",
     "url": "https://github.com/shun-shobon/discord-watchdog-bot.git"
   },
+  "devDependencies": {
+    "typescript": "^4.0.2"
+  },
   "private": true
 }
