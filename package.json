@@ -13,5 +13,18 @@
     "type": "git",
     "url": "https://github.com/shun-shobon/discord-watchdog-bot.git"
   },
+  "scripts": {
+    "start": "node build/index.js",
+    "build": "tsc",
+    "build:production": "tsc --project tsconfig.production.json",
+    "develop": "ts-node-dev --respawn src/index.ts"
+  },
+  "dependencies": {
+    "tslib": "^2.0.1"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.0.0-pre.61",
+    "typescript": "^4.0.2"
+  },
   "private": true
 }
