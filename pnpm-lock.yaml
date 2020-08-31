@@ -1,7 +1,13 @@
+dependencies:
+  tslib: 2.0.1
 devDependencies:
   typescript: 4.0.2
 lockfileVersion: 5.1
 packages:
+  /tslib/2.0.1:
+    dev: false
+    resolution:
+      integrity: sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ==
   /typescript/4.0.2:
     dev: true
     engines:
@@ -10,4 +16,5 @@ packages:
     resolution:
       integrity: sha512-e4ERvRV2wb+rRZ/IQeb3jm2VxBsirQLpQhdxplZ2MEzGvDkkMmPglecnNDfSUBivMjP93vRbngYYDQqQ/78bcQ==
 specifiers:
+  tslib: ^2.0.1
   typescript: ^4.0.2
