@@ -1,0 +1,17 @@
+{
+  "name": "discord-watchdog-bot",
+  "version": "0.0.0",
+  "description": "Discordの監査ログを監視します。",
+  "bugs": "https://github.com/shun-shobon/discord-watchdog-bot/issues",
+  "license": "MIT",
+  "author": {
+    "name": "SHUN/しゅん",
+    "email": "shun.shobon@gmail.com",
+    "url": "https://github.com/shun-shobon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shun-shobon/discord-watchdog-bot.git"
+  },
+  "private": true
+}
