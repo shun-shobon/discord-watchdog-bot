@@ -23,6 +23,8 @@
     "tslib": "^2.0.1"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.10.1",
+    "@typescript-eslint/parser": "^3.10.1",
     "eslint": "^7.7.0",
     "ts-node-dev": "^1.0.0-pre.61",
     "typescript": "^4.0.2"
