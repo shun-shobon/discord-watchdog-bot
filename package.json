@@ -1,0 +1,38 @@
+{
+  "name": "discord-watchdog-bot",
+  "version": "0.0.0",
+  "description": "Discordの監査ログを監視します。",
+  "homepage": "https://github.com/shun-shobon/discord-watchdog-bot#readme",
+  "bugs": "https://github.com/shun-shobon/discord-watchdog-bot/issues",
+  "license": "MIT",
+  "main": "build/index.js",
+  "author": {
+    "name": "SHUN/しゅん",
+    "email": "shun.shobon@gmail.com",
+    "url": "https://github.com/shun-shobon"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shun-shobon/discord-watchdog-bot.git"
+  },
+  "scripts": {
+    "start": "node build/index.js",
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn src/index.ts",
+    "lint": "eslint 'src/**/*.ts'"
+  },
+  "dependencies": {
+    "tslib": "^2.0.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.0.1",
+    "@typescript-eslint/parser": "^4.0.1",
+    "eslint": "^7.8.1",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.1",
+    "ts-node-dev": "^1.0.0-pre.62",
+    "typescript": "^4.0.2"
+  },
+  "private": true
+}
