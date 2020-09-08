@@ -11,6 +11,16 @@ const getBotsHasAnyPermissions = (
   });
 };
 
+const getBotsHasRole = (
+  guild: Discord.Guild,
+  role: Discord.Role,
+): Discord.Collection<Discord.Snowflake, Discord.GuildMember> => {
+  return guild.members.cache.filter((member) => {
+    if (!member.user.bot) return false;
+    return member.roles.cache.some((memberRole) => memberRole.equals(role));
+  });
+};
+
 dotenv.config();
 const DISCORD_TOKEN = process.env.DISCORD_TOKEN;
 if (DISCORD_TOKEN == null) {
