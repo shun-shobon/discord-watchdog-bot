@@ -27,6 +27,7 @@
     "tslib": "^2.0.1"
   },
   "devDependencies": {
+    "@discordjs/collection": "^0.1.6",
     "@types/node": "^14.6.4",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "@typescript-eslint/parser": "^4.0.1",
