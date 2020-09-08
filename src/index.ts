@@ -27,6 +27,13 @@ if (DISCORD_TOKEN == null) {
   throw new Error("DISCORD_TOKEN is not defined.");
 }
 
+const WATCH_PERMISSIONS: Discord.PermissionResolvable = [
+  "ADMINISTRATOR",
+  "KICK_MEMBERS",
+  "BAN_MEMBERS",
+  "MANAGE_GUILD",
+];
+
 const client = new Discord.Client();
 
 client.on("ready", () => {
