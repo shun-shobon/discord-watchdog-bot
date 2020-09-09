@@ -84,4 +84,14 @@ client.on("roleUpdate", async (_oldRole, newRole) => {
   await Promise.all(sendEmbedPromise);
 });
 
+const scanInterval = 60 * 60 * 1000;
+setInterval(async () => {
+  const guild = await client.guilds.fetch(TARGET_GUILD);
+  const bots = getBotsHasAnyPermissions(guild, WATCH_PERMISSIONS);
+  const sendEmbedPromise = bots.map((bot) => {
+    return sendBotLogWithEmbed(bot, "破壊的な権限がBotに付与されました。");
+  });
+  await Promise.all(sendEmbedPromise);
+}, scanInterval);
+
 client.login(DISCORD_TOKEN).catch(console.error);
