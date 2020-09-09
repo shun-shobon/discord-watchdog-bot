@@ -79,4 +79,24 @@ client.on("roleCreate", async (newRole) => {
   await Promise.all(sendEmbedPromise);
 });
 
+client.on("roleUpdate", async (_oldRole, newRole) => {
+  if (newRole.guild.id !== process.env.TARGET_GUILD) return;
+  if (!newRole.permissions.any(WATCH_PERMISSIONS)) return;
+  const bots = getBotsHasRole(newRole.guild, newRole);
+  const sendEmbedPromise = bots.map((bot) => {
+    const embed = new Discord.MessageEmbed()
+      .setTitle("Watch Dog警告")
+      .setDescription("破壊的な権限がBotに付与されました。")
+      .setColor("RED")
+      .setThumbnail(bot.user.avatarURL() ?? "")
+      .addField("Bot名", bot.nickname ?? bot.user.username)
+      .addField("現在付与されている権限", bot.permissions.toArray().join("\n"));
+    const logChannel = newRole.guild.channels.cache.get(LOG_CHANNEL) as
+      | Discord.TextChannel
+      | undefined;
+    return logChannel?.send(embed);
+  });
+  await Promise.all(sendEmbedPromise);
+});
+
 client.login(DISCORD_TOKEN).catch(console.error);
