@@ -9,6 +9,13 @@ if (DISCORD_TOKEN == null || TARGET_GUILD == null || LOG_CHANNEL == null) {
   throw new Error("DISCORD_TOKEN or TARGET_GUILD or LOG_CHANNEL is not defined.");
 }
 
+const WATCH_PERMISSIONS: Discord.PermissionResolvable = [
+  "ADMINISTRATOR",
+  "KICK_MEMBERS",
+  "BAN_MEMBERS",
+  "MANAGE_GUILD",
+];
+
 const getBotsHasAnyPermissions = (
   guild: Discord.Guild,
   permissions: Discord.PermissionResolvable,
@@ -43,13 +50,6 @@ const sendBotLogWithEmbed = async (
   const logChannel = bot.guild.channels.cache.get(LOG_CHANNEL) as Discord.TextChannel | undefined;
   await logChannel?.send(embed);
 };
-
-const WATCH_PERMISSIONS: Discord.PermissionResolvable = [
-  "ADMINISTRATOR",
-  "KICK_MEMBERS",
-  "BAN_MEMBERS",
-  "MANAGE_GUILD",
-];
 
 const client = new Discord.Client();
 
