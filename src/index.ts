@@ -89,7 +89,7 @@ setInterval(async () => {
   const guild = await client.guilds.fetch(TARGET_GUILD);
   const bots = getBotsHasAnyPermissions(guild, WATCH_PERMISSIONS);
   const sendEmbedPromise = bots.map((bot) => {
-    return sendBotLogWithEmbed(bot, "破壊的な権限がBotに付与されました。");
+    return sendBotLogWithEmbed(bot, "破壊的な権限がBotに付与されています。");
   });
   await Promise.all(sendEmbedPromise);
 }, scanInterval);
